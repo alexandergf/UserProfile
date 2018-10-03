@@ -10,17 +10,19 @@
         android:id="@+id/backview"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="18:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/holo_green_dark" />
+        app:srcCompat="@android:color/holo_green_dark"
+        android:scaleType="centerCrop"/>
 
     <view
         android:id="@+id/rule"
         class="android.support.v4.widget.Space"
         id="@+id/view"
         android:layout_width="0dp"
-        android:layout_height="10dp"
+        android:layout_height="0dp"
 
         android:background="@android:color/holo_red_dark"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,10 +32,173 @@
     <ImageView
         android:id="@+id/followview"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rule"
-        app:srcCompat="@color/colorPrimaryDark" />
+        app:srcCompat="@color/apagado" />
 
+    <view
+        android:id="@+id/rule2"
+        class="android.support.v4.widget.Space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/followview" />
+
+    <TextView
+        android:id="@+id/followingview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="FOLLOWING"
+        android:textColor="@color/grisFoll"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/followersview"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/followview"
+        app:layout_constraintStart_toStartOf="@+id/followview"
+        app:layout_constraintTop_toBottomOf="@+id/rule" />
+
+    <TextView
+        android:id="@+id/followersview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="FOLLOWERS"
+        android:textColor="@color/grisFoll"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/followview"
+        app:layout_constraintStart_toEndOf="@+id/followingview"
+        app:layout_constraintTop_toBottomOf="@+id/rule" />
+
+    <TextView
+        android:id="@+id/aboutmeview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="About Me"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rule2" />
+
+    <TextView
+        android:id="@+id/textoabview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/grisFoll"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutmeview" />
+
+    <ImageView
+        android:id="@+id/fotoview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="false"
+        app:layout_constraintBottom_toTopOf="@+id/namelastview"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/backview"
+        app:layout_constraintStart_toStartOf="@+id/backview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/followingnumview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="#307d45"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/followview"
+        app:layout_constraintEnd_toEndOf="@+id/followingview"
+        app:layout_constraintStart_toStartOf="@+id/followingview"
+        app:layout_constraintTop_toBottomOf="@+id/followingview" />
+
+    <TextView
+        android:id="@+id/followersnumview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="#307d45"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rule2"
+        app:layout_constraintEnd_toEndOf="@+id/followersview"
+        app:layout_constraintStart_toStartOf="@+id/followersview"
+        app:layout_constraintTop_toBottomOf="@+id/followersview" />
+
+    <TextView
+        android:id="@+id/handleview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/rule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/namelastview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/handleview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
