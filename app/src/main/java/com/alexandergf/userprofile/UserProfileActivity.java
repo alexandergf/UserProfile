@@ -95,7 +95,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
     //------------------------------------------------------------------
     private void jsonParse() {
-        String url="https://api.myjson.com/bins/1der7k";
+        String url="https://raw.githubusercontent.com/alexandergf/UserProfile/master/app/src/main/assets/AlexanderGonzalez.json";
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
